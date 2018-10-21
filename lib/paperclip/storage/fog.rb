@@ -225,7 +225,7 @@ module Paperclip
       end
 
       def connection
-        @connection ||= ::Fog::Storage.new(fog_credentials)
+        @connection ||= ::Fog::OpenStack::Storage.new(fog_credentials)
       end
 
       def directory
